@@ -81,11 +81,10 @@ export default function Notes() {
         attachment = await s3Upload(file.current);
       }
   
-      let response = await saveNote({
+      await saveNote({
         content,
         attachment: attachment || note.attachment
       });
-      console.log(response);
       history.push("/");
     } catch (e) {
       onError(e);
