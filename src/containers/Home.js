@@ -40,6 +40,7 @@ export default function Home() {
   function renderNotesList(notes) {
     return (
         <>
+          <div>
             <LinkContainer to="/notes/new">
                 <ListGroup.Item action className="py-3 text-nowrap text-truncate">
                     <BsPencilSquare size={17} />
@@ -59,6 +60,7 @@ export default function Home() {
                     </ListGroup.Item>
                 </LinkContainer>
             ))}
+          </div>
         </>
     );
   }
